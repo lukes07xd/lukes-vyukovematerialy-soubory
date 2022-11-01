@@ -1,0 +1,47 @@
+Pro vás není problém
+V desítkové soustavě:
+	273
+
+
+3 - odpovídá třem jedničkám
+7 - odpovídá sedmi desítkám
+2 - odpovídá dvěma stovkám
+
+tedy                3
+plus               70
+plus              200
+je                  273	
+
+V jakékoli jiné soustavě postupuji stejně:
+Dvojková soustava ----------------------------------------------------------------------------------
+
+	11101
+
+řád jednotky	1*1 = 1		sepíšu 1
+řád dvojek		2*0 = 0		přičtu 0
+řád čtyřek		4*1 = 4		přičtu 4
+řád osmiček	8*1 = 8		přičtu 8
+řád šestnáctek	16*1 = 16		přičtu 16
+
+tedy 11101 ve dvojkové soustavě je 1+4+8+16=29 v desítkové soustavě
+
+Osmičková soustava ---------------------------------------------------------------------------------
+
+	273
+
+řád jednotky	3*1 = 3		sepíšu 3
+řád osmiček	7*8 = 56		přičtu 56
+řád šedesátčtyřek	2*64 = 128	přičtu 128
+
+tedy	187
+
+Šestnáctková soustava ---------------------------------------------------------------------------------
+
+	FFA
+
+řád jednotky	      1*10 = 10	sepíšu 10
+řád šestnáctek	      15*16 = 240	přičtu 240
+řád dvěstěpadesátšestek 15*256 = 3840	přičtu 3840
+
+tedy	4090
+

@@ -1,0 +1,77 @@
+Kódování čísel
+Připomeňme si - pomůže nám převod dvojková/desítková soustava
+1111
+zprava doleva:
+dva na nultou - jedničky
+dva na prvou - dvojky
+dva na druhou - čtyřky
+dva na třetí - osmičky
+
+Dvojková soustava má členy 0,1
+Osmičková soustava má členy 0,1,2,3,4,5,6,7
+Šestnácková soustava má členy 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+
+
+bit (bit) [b] - je základní, nejmenší jednotkou dat. (logicky-pravda/nepravda, číslo-1/0)
+
+U PC techniky se ustálilo ukládat a pracovat s osmicemi bitů.
+Skupina 8 bitů se nazývá bajt (bajt) [B]
+
+1  2  3  4  5  6  7  8
+
+Čísla ve dvojkové soustavě mají své předpony:
+dva na		značení		říkáme	hodnota
+desátou		Ki		kibi	1 024
+dvacátou		Mi		mebi	1 048 576
+třicátou		Gi		gibi	1 073 741 824
+čtyřicátou		Ti		tebi	1 099 511 627 776
+
+binární kódování -----------------------------
+nejsnazší možnost práce s číslem je ve dvojkové soustavě s celou osmicí bitů
+
+oktalové kódování ---------------------------
+1  2  3  4  5  6  7  8
+z bitů vytvoříme osmičkové číslo (tři bity mohou nabývat 8 kombinací - 0-7) :
+6 7 8
+3 4 5  
+1 2     
+
+příklad:
+172 představují bity v osmici   01  111  010
+311 představují bity v osmici   11  001  001
+
+hexadecimální kódování ----------------------
+1  2  3  4  5  6  7  8
+z bitů vytvoříme šestnáctkové číslo (čtyři bity mohou nabývat 16 kombinací - 0-F) :
+5 6 7 8
+1 2 3 4   
+
+příklad:
+FF představují bity v osmici   1111  1111
+A0 představují bity v osmici   1010  0000
+
+desítkové kódování ----------------------
+1  2  3  4  5  6  7  8
+z všech bitů vytvoříme desítkové číslo (čtyři bity mohou nabývat 16 kombinací - 0-F) :
+
+příklad:
+255 představují bity v osmici   11111111
+160 představují bity v osmici   10100000
+
+
+BCD kódování (Binary Coded Decimal)----------------------------------------
+kódování celých čísel - pouze desítkových číslic (0-9), do čtveřic bitů
+v paměti		hodnota
+0000		0
+0001		1		
+0010		2		
+0011		3		
+0100		4	
+0101		5		
+0110		6		
+0111		7		
+1000		8		
+1001		9
+ostatní kombinace bitů jsou zakázané
+
+Poznámka: stejný kód jako hexidecimální je omezeno na velikosti 0 až 9

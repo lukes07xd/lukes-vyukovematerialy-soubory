@@ -1,0 +1,69 @@
+Pro vás není problém
+Sčítání v desítkové soustavě:
+	273
+	+51
+	-----
+1 plus 3 jsou 4	v řádu jedniček sepíšu 4
+5 plus 7 je 12	znak pro desítku neznám - sepíšu v desítkách 2 a jedničku přičtu k řádu stovek
+1 plus 2 jsou 3	sepíšu 3 ve stovkách
+
+tedy	324	
+
+V jakékoli jiné soustavě postupuji stejně:
+Dvojková soustava ----------------------------------------------------------------------------------
+
+	11101
+	+    11
+	-------
+
+řád jednotky	1 + 1 = 10		sepíšu 0 a v řádu dvojek přičtu 1
+řád dvojek		1 + 1 = 10		sepíšu 0 a v řádu čtyřek přičtu 1
+řád čtyřek		1 + 1 = 10		sepíšu 0 a v řádu osmiček přičtu 1
+řád osmiček	1 + 1 = 10		sepíšu 0 a v řádu šestnáctek přičtu 1
+řád šestnáctek	1 + 1 = 10		sepíšu 0 a v řádu třicetdvojek přičtu 1
+řád třicetdvojek	1 + 0 = 1		sepíšu 1
+
+tedy	100000
+
+Osmičková soustava ---------------------------------------------------------------------------------
+
+	273
+	+  6
+	......
+
+řád jednotky	6 + 3 = 9		9 o 1 přesahuje základ soustavy (8) sepíšu 1 a v řádu osmiček přičtu 1
+řád osmiček	1 + 7 = 8		8 o 0 přesahuje nejvyšší možný znak (8) sepíšu 0 a v řádu šedesátčtyřek přičtu 1
+řád šedesátčtyřek	1 + 2 = 3		sepíšu 3
+
+tedy	301
+
+Šestnáctková soustava ---------------------------------------------------------------------------------
+
+	FFA
+	+   6
+	------
+
+řád jednotky	      6 + 10 = 16	16 o 0 přesahuje základ soustavy (16) sepíšu 0 a v řádu šestnáctek přičtu 1
+řád šestnáctek	      1 + 15 = 16	16 o 0 přesahuje základ soustavy (16) sepíšu 0 a v řádu dvěstěpadesátšestek přičtu 1
+řád dvěstěpadesátšestek 1 + 15 = 16	16 o 0 přesahuje základ soustavy (16) sepíšu 0 a v řádu dvěstěpadesátšestek přičtu 1
+řád 4 096		      1 + 0 = 1
+tedy	1000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Násobení v jiných soustavách
+
+Desítkově
+
+	 25
+	x 5
+	---
+
+sečtu	25 + 25 + 25 + 25 +25 = 125
+
+
+==================== >>>>>>>>> operace násobení jsem převed na sčítání
+
+jiné soustavy obdobně
+
+ 

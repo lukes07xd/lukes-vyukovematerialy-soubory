@@ -1,0 +1,53 @@
+Budeme převádět z desítkové soustavy do dvojkové
+
+273 - desítkové číslo
+
+273 : 2 = 136 zbytek 1
+136 : 2 =  68  zbytek 0
+68 : 2  = 34    zbytek 0
+34 : 2 = 17     zbytek 0
+17 : 2 = 8       zbytek 1
+8 : 2 = 4         zbytek 0
+4 : 2 = 2         zbytek 0
+2 : 2 = 1         zbytek 0
+1 : 2 = 0         zbytek 1
+
+
+Sepíšu odspoda 100010001
+ Chyby:
+- musím končit po dělení nulou
+- nejvyšší řád je odspoda - sepisuji odspoda
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+Druhá možnost
+Uvědomím si řády v dvojkové soustavě:
+1
+2
+4
+8
+16
+32
+64
+128
+256
+512
+
+Vyberu hodnoty řádů, které mohu postupně odečíst z 273 je 256
+273 - 256 = 17     u 256 bude 1
+17 - 16 = 1            u 16 bude 1
+1 - 1 = 0                 u 1 bude 1
+            1
+
+Nechávám pro přehlednost jen 1             1
+1              1
+2
+4
+8
+16            1
+32
+64
+128
+256         1
+512
+
+Odspoda 100010001

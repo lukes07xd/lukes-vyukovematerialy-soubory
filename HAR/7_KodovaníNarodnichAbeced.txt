@@ -1,0 +1,49 @@
+Kódování do národních znaků
+-------------------------
+opakujem:
+počítač zná jen čísla
+b (bit) - nejmenší možná informace
+B (Byte) - v PC technice 8b
+nic jiného v počítači fyzicky neuložím
+proto kódování znaků ASCII (stačí 7b/ale doplňuje se na 8b)  = tabulka: jedna strana číslo druhá znak
+USA a Angličané jen 128 znaků nepoužívají háčky, čárky, přehlásky
+ASCII - jen malá velká písmena, číslice, závorky, lomítka, interpunkční znaménka, řídící znaky tisku, číslice
+-------------------------
+
+V ASCII chybí např: á,é,šč... ale třeba i ö,ä, ĺ ...
+proto pro každý národ doplnění této abecedy dalšími kódy
+princip vychází ASCII, k tomuto kódu se přidá bit (nebo víc bitů), že jde např. o čárku následujícího A
+Takže místo sedmi bitů, které stačí pro ASCII, bude jeden znak ve více bitech
+
+
+Zpočátku vznikalo toto kódování ve světě živelně proto historicky vzniklo mnoho kódů
+u nás
+-kód Bratří Kamenických - pod DOSem, využíval již hotový kód do němčiny = podobné znaky (němčina ë u nás ě)
+-ISO 852 - Microsoft a IBM (pro středoevropské jazyky)
+-Cork - kód který nepoužívá ASCII jedná se o typografické kódování znaků
+
+poznámka: pokud někdo někdy kódoval nějakým způsobem, může mít text význam i dnes (proto textové editory mnohdy obsahují mnoho možností)
+
+
+Kódy dnes používané
+-Window 1250 256 znaková sada od Microsoftu používá například Microsoft Office velikost 00-FF (čeština ve středoevropských jazycích)
+-Latin 2 (ISO-8859–2) (čeština středoevropské jazyky) používá Linux, e-mail proti Windows 1250 šifruje Ž,Š,Ť
+-UNICODE obsahuje milion znaků = sjednocení národních abeced 
+   základem je BMP (Basic multi-language plane) 7 bytu z ASCII 128 znaků ASCII 
+   celkem 32b to je 4B
+
+Kódovaníi UTF (Unicorn Transformation Format)
+Jak v 8-bitovém prostoru disku uložit delší číslo?
+UTF-32 každý znak reprezentován 32b = nešetrné - jakýkoliv znak z celého světa, ale velice dlouhý záznam
+UTF-16 pokud nechci psát v textu všemi jazyky stačí některé znaky stačí 16 bitové číslo
+UTF-8 proměnná délka 1 až 4 byte - česká abeceda stačí dva Byte (pokud A bez čárky potom délka 1 byte, pokud Á s čárkou nutné dva Byte)
+
+UTF-16 jednoduché kódování a dekódování
+UTF-8 složitější dekódování, ale kratší soubor
+UTF-32 velice dlouhý záznam, ale celý svět
+
+Musíme vyřešit co znamená první a co druhý Byte
+1. Byte     2. Byte
+--------    --------
+proto značení např.: UTF16 LE
+LE nebo BE  (Little endian / Big endian) - určíme kde je ASCII(BMP) a kde značení národního znaku (čárka...)

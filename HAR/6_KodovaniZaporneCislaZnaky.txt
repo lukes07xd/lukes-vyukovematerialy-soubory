@@ -1,0 +1,75 @@
+Kódování záporných čísel
+Záporné číslo ve čtyřech bitech
+- v počítači být musí předem dáno, že jde o záporné číslo (musíme předem definovat)
+- definicí, že jde o záporné číslo zmenšíme maximální velikost na polovinu
+
+1) Nejvyšší bit značí znaménko ------------------------------------------
+
+1 2 3 4 5 6 7 8
+
+bit 1 - nula značí kladné / jednička záporné číslo
+není příliš vhodné k výpočtům
+snadno se tiskne
+
+
+2) dvojkový doplněk --------------------------------------------
+s číslem mohu dobře počítat
+pracuji ve 4 bitech - co přesáhne 4 bity nechám být
+
+příklad:
+číslo 3 je ve čtyřech bitech 0011
+otočím všechny 1 na 0 a obráceně
+tedy: 0011 -----> 1100
+následně přičtu 1  -----> 1100 + 1 = 1101
+
+-3    kóduji jako 1101
+
+zkouška:
+5 + (-3) = 2
+binárně:
+0101 + 1101
+
+     0101
+     1101
+  ----------
+  1  0010
+necháme jen nejnižší čtyři bity  -----> 0010 po převodu do desítkové soustavy 2
+
+- v počítači být musí předem dáno, že jde o záporné číslo (musíme předem definovat)
+===================================================================================
+
+
+
+Kódování znaků
+- použijeme převodní tabulku, kde na jedné straně bude číslo v počítači a na druhé straně jeho tisknutelný význam
+- základem kódování znaků je ASCII kód ( American Standard Code for Information Interchange )
+
+ASCII kód
+- obsahuje
+	tisknutelné znaky: písmena, číslice, jiné znaky (závorky, matematické znaky (+ - * / % atd.)
+	interpunkční znaménka (, . : ; atd.)
+	speciální znaky (@ $ ~ atd.))
+	řídicí (netisknutelné) kódy
+	nelze uložit národní znaky - jako Á, Š ...
+
+Např.:
+hexadecimální kód		význam
+41			A
+42			B
+43			C
+44			D
+45			E ...
+ale i
+26			&
+27			'
+28			(
+nebo
+7F			DEL (delete)
+1b			ESC
+nebo
+30	0
+31	1
+32	2
+33	3
+------------------------------------------------------------------------------
+
